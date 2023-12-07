@@ -1,39 +1,47 @@
-$(document).ready(function() {
-hourHand3 = document.querySelector(".hour3"),
-minuteHand3 = document.querySelector(".minute3"),
-secondHand3 = document.querySelector(".second3"),
-modeSwitch3 = document.querySelector(".mode-switch3");
+$(document).ready(function () {
+  hourHand3 = document.querySelector(".hour3"),
+    minuteHand3 = document.querySelector(".minute3"),
+    secondHand3 = document.querySelector(".second3"),
+    modeSwitch3 = document.querySelector(".mode-switch3");
 
 
-const clockbody3 = document.querySelector("#clock3");
-const updateTime3 = () => {
-// Get current time and calculate degrees for clock hands
+  const clockbody3 = document.querySelector("#clock3");
+  const updateTime3 = () => {
+    // Get current time and calculate degrees for clock hands
 
-let date3 = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Argentina/Buenos_Aires"})),
-  secToDeg3 = (date3.getSeconds() / 60) * 360,
-  minToDeg3 = (date3.getMinutes() / 60) * 360,
-  hrToDeg3 = (date3.getHours() / 12) * 360;
-// Rotate the clock hands to the appropriate degree based on the current time
-secondHand3.style.transform = `rotate(${secToDeg3}deg)`;
-minuteHand3.style.transform = `rotate(${minToDeg3}deg)`;
-hourHand3.style.transform = `rotate(${hrToDeg3}deg)`;
-};
-// call updateTime to set clock hands every second
-setInterval(updateTime3, 1000);
-//call updateTime function on page load
-updateTime3();
+    let date3 = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Argentina/Buenos_Aires" })),
+      secToDeg3 = (date3.getSeconds() / 60) * 360,
+      minToDeg3 = (date3.getMinutes() / 60) * 360,
+      hrToDeg3 = (date3.getHours() / 12) * 360;
+    // Rotate the clock hands to the appropriate degree based on the current time
+    secondHand3.style.transform = `rotate(${secToDeg3}deg)`;
+    minuteHand3.style.transform = `rotate(${minToDeg3}deg)`;
+    hourHand3.style.transform = `rotate(${hrToDeg3}deg)`;
+  };
+  // call updateTime to set clock hands every second
+  setInterval(updateTime3, 1000);
+  //call updateTime function on page load
+  updateTime3();
 
 
   // Function to update background color based on time of day
   function updateBackgroundColor3() {
-    var currentTime = new Date();
+    var currentTime = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Argentina/Buenos_Aires" }));
     var hours = currentTime.getHours();
 
     // Set background color based on time of day
     if (hours >= 6 && hours < 18) {
-      $('#clock1').css('background-color', '#ffffcc'); // Daylight color
+      $('#clock3').css('background-color', '#fff'); // Daylight color
+      $('#clock3').css('--primary-color', '#242526');
+      $('#clock3').css('--white-color', '#18191a');
+      $('#clock3').css('--black-color', '#fff');
+      $('#clock3').css('--red-color', '#e74c3c');
     } else {
-      $('#clock1').css('background-color', '#000080'); // Nighttime color
+      $('#clock3').css('background-color', '#000'); // Nighttime color
+      $('#clock3').css('--primary-color', '#242526');
+      $('#clock3').css('--white-color', '#18191a');
+      $('#clock3').css('--black-color', '#fff');
+      $('#clock3').css('--red-color', '#e74c3c');
     }
   }
 

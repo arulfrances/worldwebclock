@@ -49,12 +49,12 @@
  background: var(--red-color);
 }
 .hand2.minute2 {
- height: 120px;
+ height: 130px;
  width: 5px;
  background: var(--black-color);
 }
 .hand2.hour2 {
- height: 100px;
+ height: 90px;
  width: 8px;
  background: var(--black-color);
 }

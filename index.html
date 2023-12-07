@@ -16,41 +16,31 @@
             background: var(--primary-color);
             padding: 0;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	        background-size: 400% 400%;
-	        animation: gradient 15s ease infinite;
-	        height: 100vh;
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
             zoom: 100%;
         }
 
         @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+            0% {
+                background-position: 0% 50%;
+            }
 
-        /* body {
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            background: var(--primary-color);
-        } */
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
         .box {
             width: calc(33.33% - 20px);
-            /* Adjust margin for spacing between divs */
             margin: 10px;
             box-sizing: border-box;
             height: 50%;
-            /* Set your preferred height */
-            /* background-color: #ddd; */
-            /* Set your preferred background color */
         }
 
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -69,12 +59,12 @@
             --red-color: #e74c3c;
         }
 
-        body.dark {
+        /* body.dark {
             --primary-color: #242526;
             --white-color: #18191a;
             --black-color: #fff;
             --red-color: #e74c3c;
-        }
+        } */
 
         .container {
             display: flex;
